@@ -135,7 +135,7 @@ def get_dgl_dataset(dataroot, dataset):
     dglcitationgraph._normalize = dummy_normalization 
     dglcitationgraph._preprocess_features = dummy_normalization
     if dataset == 'cora':
-        graph = dgl.data.CoraDataset()
+        graph = dgl.data.CoraGraphDataset()
     elif dataset in ['citeseer', 'pubmed']:
         graph = dgl.data.CitationGraphDataset(name=dataset)
     elif dataset == 'coauthorcs':
